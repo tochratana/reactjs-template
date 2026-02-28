@@ -31,9 +31,9 @@ jobs:
       
       # Build docker image mean build and -t > tag already     
       - name: Build Docker image and tag
-        run: docker build -t ${{ secret.USERNAME }}/${{ env.DOCKER_IMAGE_NAME }} .
+        run: docker build -t ${{ secrets.USERNAME }}/${{ env.DOCKER_IMAGE_NAME }} .
       - name: Push to Docker hub
-        run: docker push -t ${{ secret.USERNAME }}/${{ env.DOCKER_IMAGE_NAME }}
+        run: docker push -t ${{ secrets.USERNAME }}/${{ env.DOCKER_IMAGE_NAME }}
       - name: Logout from Dockerhub
         if: always()
         run: |
