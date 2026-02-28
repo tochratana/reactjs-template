@@ -6,7 +6,7 @@ on:
 # Environment use for create variable for use in this pipeline
 env: 
   DOCKER_IMAGE_NAME: reactjs-template
-  DOCKER_TAG: 
+  HELM_REPO: tochratana/reactjs-template
 # build docker image and push to docker hub
 jobs:
   ci-jobs:
