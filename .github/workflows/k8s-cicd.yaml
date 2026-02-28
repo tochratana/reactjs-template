@@ -58,7 +58,7 @@ jobs:
           git clone https://github.com/${{ env.HELM_REPO }} helm_repo 
       - name: Update Helm Chart 
         run: |
-          cd helm_repo/reactjs-plants-chart
+          cd helm_repo
 
           echo "Update repository username/imagename "
 
