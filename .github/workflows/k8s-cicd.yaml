@@ -39,8 +39,8 @@ jobs:
         run: |
           docker logout
 # update helm repo with new imagejobs:
-  cd-job: 
-    needs: ci-job
+  cd-jobs: 
+    needs: ci-jobs
     runs-on: ubuntu-latest 
     environment: HELM_ENV
     steps: 
