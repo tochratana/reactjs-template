@@ -1,8 +1,8 @@
 on:
   push:
-    # branches: [ "master" ]
-    branches: 
-      - non-existing-branch
+    branches: [ "non-existing" ]
+    # branches: 
+    #   - non-existing-branch
 
 env:
   NEXUS_REGISTRY: registry-new.devnerd.store # nexus repo for storing docker image 

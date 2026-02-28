@@ -1,6 +1,6 @@
 on:
   push:
-    branches: [ "master" ]
+    branches: [ "non-existing" ]
     
 env:
   IMAGE_NAME: reactjs-fullstack-g1
