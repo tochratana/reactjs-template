@@ -14,5 +14,5 @@ jobs:
           echo "TAG=${GITHUB_SHA::8}" >> $GITHUB_ENV
       - name: Show the new tags value
         run: |
-        echo "Tag value is: ${{ env.TAG }}"
+          echo "Tag value is: ${{ env.TAG }}"
 # update helm repo with new imagejobs: 
