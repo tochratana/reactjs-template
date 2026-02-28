@@ -64,7 +64,7 @@ jobs:
 
           yq -i ".image.repository=\"${{ secrets.DOCKER_USERNAME }}/${{ env.DOCKER_IMAGE_NAME}}\"" values.yaml
 
-          echo "Update image tag "
+          echo "Update image tag"
           yq -i ".image.tag=\"${{ env.TAG }}\"" values.yaml
 
           git config --global user.email "username@example.com"
