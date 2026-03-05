@@ -13,12 +13,12 @@ env:
 jobs:
   sonarqube-scan:
     name: SonarQube Analysis
-    runs-on: self-hosted
+    runs-on: ubuntu-latest
     steps:
       - name: Checkout code
         uses: actions/checkout@v4
         with:
-          fetch-depth: 0  # Required for SonarQube blame info
+          fetch-depth: 0 # Required for SonarQube blame info
 
       - name: Setup Node.js
         uses: actions/setup-node@v4
@@ -35,7 +35,7 @@ jobs:
       - name: SonarQube Scan
         uses: SonarSource/sonarqube-scan-action@master
         env:
-          SONAR_TOKEN: ${{ secrets.SONAR_TOKEN }} # 
+          SONAR_TOKEN: ${{ secrets.SONAR_TOKEN }} #
           SONAR_HOST_URL: ${{ secrets.SONAR_HOST_URL }}
         with:
           args: >

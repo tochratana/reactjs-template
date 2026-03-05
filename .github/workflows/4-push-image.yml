@@ -13,7 +13,7 @@ env:
 jobs:
   push-image:
     name: Push to Docker Hub
-    runs-on: seft-hosted
+    runs-on: ubuntu-latest
     if: ${{ github.event.workflow_run.conclusion == 'success' }}
 
     steps:

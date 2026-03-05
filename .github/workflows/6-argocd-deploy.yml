@@ -19,7 +19,7 @@ env:
 jobs:
   argocd-deploy:
     name: ArgoCD Create & Sync
-    runs-on: seft-hosted
+    runs-on: ubuntu-latest
     if: ${{ github.event.workflow_run.conclusion == 'success' }}
 
     steps:
