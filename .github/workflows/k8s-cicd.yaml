@@ -12,7 +12,7 @@ jobs:
   ci-jobs:
 
     # runs-on mean select machines for run this pipeline, normaly it have two type of this (github machines, and self hosted machines)
-    runs-on: ubuntu-latest
+    runs-on: self-hosted
     environment: DOCKER_ENV # setting > Environment > create environment
     steps:
       - name: Checkout code
