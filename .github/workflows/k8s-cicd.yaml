@@ -13,7 +13,7 @@ jobs:
 
     # runs-on mean select machines for run this pipeline, normaly it have two type of this (github machines, and self hosted machines)
     runs-on: self-hosted
-    environment: DOCKER_ENV # setting > Environment > create environment
+    environment: DOCKER_ENV # setting > Environment > create environment ok
     steps:
       - name: Checkout code
         uses: actions/checkout@v3
