@@ -1,17 +1,13 @@
-FROM node:alpine AS builder
+# 1. Foundamental Instruction
+FROM node: 22-alpine
+
+# 2. Configuration Instruction
 WORKDIR /app
 COPY package*.json ./
-RUN npm i
+RUN npm install
+COPY . .
+# Document which port container run 
+EXPOSE 3000
 
-# COPY  . . 
-COPY src ./src
-COPY public ./public 
-RUN npm run build 
-
-
-# Stage:2 production 
-FROM nginx:alpine
-COPY nginx.conf /etc/nginx/conf.d/default.conf
-COPY --from=builder /app/build /usr/share/nginx/html
-EXPOSE 80
-ENTRYPOINT [ "nginx", "-g", "daemon off;" ]
+# 3. Execution Instruction
+CMD ["npm", "start"]
